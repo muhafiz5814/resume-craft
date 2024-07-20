@@ -1,0 +1,8 @@
+.basic-info-div {
+  width: 90%;
+  background-color: cadetblue;
+  margin-top: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
