@@ -1,0 +1,14 @@
+.home .header{
+  background-color: yellow;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.home .header button {
+  width: fit-content;
+}
+

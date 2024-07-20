@@ -1,9 +1,9 @@
 import './App.css';
-
-function App() {
+import Home from './components/Home/Home';
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello!</h1>
+      <Home />
     </div>
   );
 }
