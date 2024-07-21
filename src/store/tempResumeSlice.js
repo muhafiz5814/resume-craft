@@ -35,8 +35,8 @@ const initialData = {
     {
       id: nanoid(),
       title: "",
-      startOn: "",
-      endOn: "",
+      startMonth: "",
+      endMonth: "",
       url: "",
       description: ""
     }
@@ -59,10 +59,12 @@ const tempResumeSlice = createSlice({
     addEducation: (state, action) => {state.education = [...state.education, {id: nanoid(), ...action.payload}]},
     updateEducation: (state, action) => {state.education = action.payload},
     addExperience: (state, action) => {state.experience = [...state.experience, {id: nanoid(), ...action.payload}]},
-    updateExperience: (state, action) => {state.experience = action.payload}
+    updateExperience: (state, action) => {state.experience = action.payload},
+    addProject: (state, action) => {state.projects = [...state.projects, {id: nanoid(), ...action.payload}]},
+    updateProjects: (state, action) => {state.projects = action.payload},
   }
 })
 
-export const {updateBasicInfo, updateAboutMe, addEducation, updateEducation, addExperience, updateExperience} =tempResumeSlice.actions
+export const {updateBasicInfo, updateAboutMe, addEducation, updateEducation, addExperience, updateExperience, addProject, updateProjects} = tempResumeSlice.actions
 
 export const tempResumeReducer = tempResumeSlice.reducer

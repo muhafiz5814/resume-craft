@@ -31,7 +31,7 @@ const ExperienceForm = () => {
   }
 
   return (
-    <div className="education-form">
+    <div className="experience-form">
       <h3>Experience</h3>
       <button onClick={() => dispatch(addExperience(emptyExperience))}>+</button>
       {experience 
