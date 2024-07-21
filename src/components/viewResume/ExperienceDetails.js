@@ -10,7 +10,7 @@ const ExperienceDetails = () => {
       <div className="title"><h2>Experience</h2></div>
       <div className="content">
         {experience
-          ? experience.map(item => <Experience key={item.id} {...item}/>)
+          ? experience.map((item, i) => <Experience key={i} {...item}/>)
           : <h2>Loading...</h2>
         }
       </div>

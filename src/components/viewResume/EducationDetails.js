@@ -10,7 +10,7 @@ const EducationDetails = () => {
       <div className="title"><h2>Education</h2></div>
       <div className="content">
         {education
-          ? education.map(item => <Education key={item.id} {...item}/>)
+          ? education.map((item, i) => <Education key={i} {...item}/>)
           : <h2>Loading</h2>
         }
       </div>

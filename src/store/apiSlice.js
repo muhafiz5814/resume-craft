@@ -1,3 +1,4 @@
+import { nanoid } from "@reduxjs/toolkit"
 import {createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || "http://localhost:3030"
@@ -27,7 +28,7 @@ export const resumeApi = createApi({
       query: (newResume) => ({
         url: `/resumes`,
         method: `POST`,
-        body: JSON.stringify(newResume)
+        body: JSON.stringify({id:nanoid() ,...newResume})
       }),
       invalidatesTags: ["Resumes"]
     }),
