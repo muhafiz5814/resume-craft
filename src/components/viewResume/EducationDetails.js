@@ -1,4 +1,3 @@
-import "./EducationDetails.css"
 import Education from "./Education"
 const EducationDetails = () => {
   return (

@@ -1,4 +1,3 @@
-import "./Projects.css"
 import Project from "./Project"
 const Projects = () => {
   return (

@@ -1,4 +1,3 @@
-import "./Skills.css"
 import Skill from "./Skill"
 const Skills = () => {
   return (

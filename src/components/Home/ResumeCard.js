@@ -1,5 +1,3 @@
-import "./ResumeCard.css"
-
 const ResumeCard = () => {
   return (
     <div className="resume-card">

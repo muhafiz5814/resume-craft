@@ -1,11 +1,11 @@
 import "./Resume.css"
 import Layout from "../Layout"
-import BasicInfo from "../BasicInfo/BasicInfo"
-import AboutMe from "../AboutMe/AboutMe"
-import EducationDetails from "../EducationDetails/EducationDetails"
-import ExperienceDetails from "../ExperienceDetails/ExperienceDetails"
-import Projects from "../Projects/Projects"
-import Skills from "../Skills/Skills"
+import BasicInfo from "./BasicInfo"
+import AboutMe from "./AboutMe"
+import EducationDetails from "./EducationDetails"
+import ExperienceDetails from "./ExperienceDetails"
+import Projects from "./Projects"
+import Skills from "./Skills"
 
 const Resume = () => {
   return (

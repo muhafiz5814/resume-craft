@@ -1,4 +1,3 @@
-import "./ExperienceDetails.css"
 import Experience from "./Experience"
 const ExperienceDetails = () => {
   return (

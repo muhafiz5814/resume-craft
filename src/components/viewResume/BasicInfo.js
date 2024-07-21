@@ -1,5 +1,3 @@
-import "./BasicInfo.css"
-
 const BasicInfo = () => {
   return (
     <div className="basic-info-div">
