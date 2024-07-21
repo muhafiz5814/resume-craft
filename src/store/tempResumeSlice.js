@@ -53,10 +53,11 @@ const tempResumeSlice = createSlice({
   name: "tempResume",
   initialState: initialData,
   reducers: {
-    updateBasicInfo: (state, action) => {state.basicInfo = {...state.basicInfo, ...action.payload}}
+    updateBasicInfo: (state, action) => {state.basicInfo = {...state.basicInfo, ...action.payload}},
+    updateAboutMe: (state, action) => {state.aboutMe = action.payload.description}
   }
 })
 
-export const {updateBasicInfo} =tempResumeSlice.actions
+export const {updateBasicInfo, updateAboutMe} =tempResumeSlice.actions
 
 export const tempResumeReducer = tempResumeSlice.reducer
