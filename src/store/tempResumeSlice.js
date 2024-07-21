@@ -62,9 +62,11 @@ const tempResumeSlice = createSlice({
     updateExperience: (state, action) => {state.experience = action.payload},
     addProject: (state, action) => {state.projects = [...state.projects, {id: nanoid(), ...action.payload}]},
     updateProjects: (state, action) => {state.projects = action.payload},
+    addSkill: (state, action) => {state.skills = [...state.skills, {id: nanoid(), ...action.payload}]},
+    updateSkills: (state, action) => {state.skills = action.payload},
   }
 })
 
-export const {updateBasicInfo, updateAboutMe, addEducation, updateEducation, addExperience, updateExperience, addProject, updateProjects} = tempResumeSlice.actions
+export const {updateBasicInfo, updateAboutMe, addEducation, updateEducation, addExperience, updateExperience, addProject, updateProjects, addSkill, updateSkills} = tempResumeSlice.actions
 
 export const tempResumeReducer = tempResumeSlice.reducer

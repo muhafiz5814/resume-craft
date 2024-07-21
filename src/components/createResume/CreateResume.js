@@ -4,6 +4,7 @@ import BasicInfoForm from "./BasicInfoForm"
 import EducationForm from "./EducationForm"
 import ExperienceForm from "./ExperienceForm"
 import ProjectsForm from "./ProjectsForm"
+import SkillsForm from "./SkillsForm"
 
 const CreateResume = () => {
   return (
@@ -13,6 +14,7 @@ const CreateResume = () => {
       <EducationForm />
       <ExperienceForm />
       <ProjectsForm />
+      <SkillsForm />
     </Layout>
   )
 }
