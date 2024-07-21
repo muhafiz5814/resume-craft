@@ -11,26 +11,26 @@
         "website": "https://www.linkedin.com"
       },
       "aboutMe": "A passionate web developer.",
-      "education":  [
-          {
-            "id": "ed1",
-            "school": "Pragati Public Sr. Sec. School",
-            "startYear": "2015",
-            "endYear": "2017",
-            "descriptions": "Higher education"
-          }
-        ],
+      "education": [
+        {
+          "id": "ed1",
+          "school": "Pragati Public Sr. Sec. School",
+          "startYear": "2015",
+          "endYear": "2017",
+          "descriptions": "Higher education"
+        }
+      ],
       "experience": [
-          {
-            "id": "e1",
-            "designation": "Web Developer intern",
-            "organization": "Google",
-            "startYear": "2015",
-            "endYear": "2017",
-            "location": "India",
-            "description": "Worked as a web developer intern in maps team"
-          }
-        ],
+        {
+          "id": "e1",
+          "designation": "Web Developer intern",
+          "organization": "Google",
+          "startYear": "2015",
+          "endYear": "2017",
+          "location": "India",
+          "description": "Worked as a web developer intern in maps team"
+        }
+      ],
       "projects": [
         {
           "id": "p1",
@@ -60,25 +60,25 @@
         "website": "https://www.linkedin.com"
       },
       "aboutMe": "A passionate web developer.",
-      "education":  [
-          {
-            "id": "ed1",
-            "school": "Pragati Public Sr. Sec. School",
-            "start-year": "2015",
-            "end-year": "2017",
-            "descriptions": "Higher education"
-          }
-        ],
+      "education": [
+        {
+          "id": "ed1",
+          "school": "Pragati Public Sr. Sec. School",
+          "start-year": "2015",
+          "end-year": "2017",
+          "descriptions": "Higher education"
+        }
+      ],
       "experience": [
-          {
-            "id": "e1",
-            "designation": "Web Developer intern",
-            "organization": "Google",
-            "tenure": "2021-2022",
-            "location": "India",
-            "description": "Worked as a web developer intern in maps team"
-          }
-        ],
+        {
+          "id": "e1",
+          "designation": "Web Developer intern",
+          "organization": "Google",
+          "tenure": "2021-2022",
+          "location": "India",
+          "description": "Worked as a web developer intern in maps team"
+        }
+      ],
       "projects": [
         {
           "id": "p1",
@@ -107,25 +107,25 @@
         "website": "https://www.linkedin.com"
       },
       "aboutMe": "A passionate web developer.",
-      "education":  [
-          {
-            "id": "ed1",
-            "school": "Pragati Public Sr. Sec. School",
-            "start-year": "2015",
-            "end-year": "2017",
-            "descriptions": "Higher education"
-          }
-        ],
+      "education": [
+        {
+          "id": "ed1",
+          "school": "Pragati Public Sr. Sec. School",
+          "start-year": "2015",
+          "end-year": "2017",
+          "descriptions": "Higher education"
+        }
+      ],
       "experience": [
-          {
-            "id": "e1",
-            "designation": "Web Developer intern",
-            "organization": "Google",
-            "tenure": "2021-2022",
-            "location": "India",
-            "description": "Worked as a web developer intern in maps team"
-          }
-        ],
+        {
+          "id": "e1",
+          "designation": "Web Developer intern",
+          "organization": "Google",
+          "tenure": "2021-2022",
+          "location": "India",
+          "description": "Worked as a web developer intern in maps team"
+        }
+      ],
       "projects": [
         {
           "id": "p1",
