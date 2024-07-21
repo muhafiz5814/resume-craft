@@ -1,0 +1,21 @@
+.app {
+  /* text-align: center; */
+  background-color: rgb(173, 130, 130);
+  /* width: 90%; */
+  padding: 20px;
+  
+}
+
+.logo {
+  border-bottom: 1px solid rgb(110, 37, 37);
+
+}
+
+.link-to-home {
+  text-decoration: none;
+}
+
+.main {
+  width: 95%;
+  margin: 0 auto;
+}
