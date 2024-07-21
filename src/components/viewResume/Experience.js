@@ -1,10 +1,10 @@
-const Experience = () => {
+const Experience = ({designation, organization, startYear, endYear, location, description}) => {
   return (
     <div className="experience-div">
-      <p><strong>School</strong></p>
-      <p>Organisation, Year-Year</p>
-      <p>Location</p>
-      <p>Description</p>
+      <p><strong>{designation}</strong></p>
+      <p>{`${organization}, ${startYear}-${endYear}`}</p>
+      <p>{location}</p>
+      <p>{description}</p>
     </div>
   )
 }

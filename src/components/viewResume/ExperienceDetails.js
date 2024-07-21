@@ -1,9 +1,19 @@
 import Experience from "./Experience"
+import { shallowEqual, useSelector } from "react-redux"
+
 const ExperienceDetails = () => {
+
+  const { experience }= useSelector(state => state.localResume, shallowEqual)
+
   return (
     <div className="experience-details-div">
-      <Experience />
-      <Experience />
+      <div className="title"><h2>Experience</h2></div>
+      <div className="content">
+        {experience
+          ? experience.map(item => <Experience key={item.id} {...item}/>)
+          : <h2>Loading...</h2>
+        }
+      </div>
     </div>
   )
 }

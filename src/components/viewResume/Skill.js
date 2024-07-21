@@ -1,8 +1,8 @@
-const Skill = () => {
+const Skill = ({skill, rating}) => {
   return (
     <div className="skill-div">
-      <div>Skill</div>
-      <div>Rating</div>
+      <div>{skill}</div>
+      <div>{rating}</div>
     </div>
   )
 }

@@ -15,8 +15,8 @@
           {
             "id": "ed1",
             "school": "Pragati Public Sr. Sec. School",
-            "start-year": "2015",
-            "end-year": "2017",
+            "startYear": "2015",
+            "endYear": "2017",
             "descriptions": "Higher education"
           }
         ],
@@ -25,7 +25,8 @@
             "id": "e1",
             "designation": "Web Developer intern",
             "organization": "Google",
-            "tenure": "2021-2022",
+            "startYear": "2015",
+            "endYear": "2017",
             "location": "India",
             "description": "Worked as a web developer intern in maps team"
           }
@@ -34,8 +35,9 @@
         {
           "id": "p1",
           "title": "ShopCart",
-          "tenure": "2023",
-          "url": "some url",
+          "startOn": "2015",
+          "endOn": "2015",
+          "url": "https://www.linkedin.com",
           "description": "A React App made to practice and understand the concept of state management using Redux."
         }
       ],

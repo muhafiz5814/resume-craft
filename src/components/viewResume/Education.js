@@ -1,9 +1,9 @@
-const Education = () => {
+const Education = ({school, startYear, endYear, description}) => {
   return (
     <div className="education-div">
-      <p><strong>School</strong></p>
-      <p>Year-Year</p>
-      <p>Description</p>
+      <p><strong>{school}</strong></p>
+      <p>{`${startYear}-${endYear}`}</p>
+      <p>{description}</p>
     </div>
   )
 }
