@@ -16,20 +16,23 @@ const CreateResume = () => {
   const [addResume, {isLoading}] = useAddResumeMutation()
   const dispatch = useDispatch()
 
-  const handleSubmit = () => {
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
     addResume(resume)
     dispatch(clearTempResume())
   }
 
   return (
     <Layout>
-      <BasicInfoForm />
-      <AboutMeForm />
-      <EducationForm />
-      <ExperienceForm />
-      <Form />
-      <SkillsForm />
-      <button onClick={handleSubmit}>Submit</button>
+      <form onSubmit={handleSubmit}>
+        <BasicInfoForm />
+        <AboutMeForm />
+        <EducationForm />
+        <ExperienceForm />
+        <Form />
+        <SkillsForm />
+        <button type="submit">Submit</button>
+      </form>
     </Layout>
   )
 }
