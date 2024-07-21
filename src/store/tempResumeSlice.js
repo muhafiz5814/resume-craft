@@ -1,6 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialData = {
+  id: nanoid(),
   basicInfo: {
     name: "",
     designation: "",
@@ -12,7 +13,7 @@ const initialData = {
   aboutMe: "",
   education:  [
       {
-        id: "",
+        id: nanoid(),
         school: "",
         startYear: "",
         endYear: "",
@@ -21,7 +22,7 @@ const initialData = {
     ],
   experience: [
       {
-        id: "",
+        id: nanoid(),
         designation: "",
         organization: "",
         startYear: "",
@@ -32,7 +33,7 @@ const initialData = {
     ],
   projects: [
     {
-      id: "",
+      id: nanoid(),
       title: "",
       startOn: "",
       endOn: "",
@@ -42,7 +43,7 @@ const initialData = {
   ],
   skills: [
     {
-      id: "",
+      id: nanoid(),
       skill: "",
       rating: 0
     }
@@ -54,10 +55,12 @@ const tempResumeSlice = createSlice({
   initialState: initialData,
   reducers: {
     updateBasicInfo: (state, action) => {state.basicInfo = {...state.basicInfo, ...action.payload}},
-    updateAboutMe: (state, action) => {state.aboutMe = action.payload.description}
+    updateAboutMe: (state, action) => {state.aboutMe = action.payload.description},
+    addEducation: (state, action) => {state.education = [...state.education, {id: nanoid(), ...action.payload}]},
+    updateEducation: (state, action) => {state.education = action.payload}
   }
 })
 
-export const {updateBasicInfo, updateAboutMe} =tempResumeSlice.actions
+export const {updateBasicInfo, updateAboutMe, addEducation, updateEducation} =tempResumeSlice.actions
 
 export const tempResumeReducer = tempResumeSlice.reducer
