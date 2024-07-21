@@ -10,7 +10,8 @@ const Home = () => {
   const [deleteResume] = useDeleteResumeMutation()
 
   const deleteHandler = (id) => {
-    deleteResume(id)
+    const confirm = window.confirm("Do you want to delete item?")
+    if(confirm) deleteResume(id)
   }
   return (
     <Layout>
