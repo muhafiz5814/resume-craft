@@ -1,19 +1,29 @@
 import "./Home.css";
 import Layout from "../Layout";
 import ResumeCard from "./ResumeCard";
-import { useGetResumesQuery } from "../../store/apiSlice";
+import { useDeleteResumeMutation, useGetResumesQuery } from "../../store/apiSlice";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { data: resumes, isLoading, error } = useGetResumesQuery();
   console.log(resumes);
+  const [deleteResume] = useDeleteResumeMutation()
 
+  const deleteHandler = (id) => {
+    deleteResume(id)
+  }
   return (
     <Layout>
       <div className="home">
         <div className="create-resume">
-          <button className="create-resume-btn">Create a Resume</button>
+          <Link to={`/create`}>
+            Create Resume
+          </Link>
         </div>
-        {isLoading ? <h2>Please wait...</h2> : <ResumeCard />}
+        {isLoading 
+          ? <h2>Please wait...</h2> 
+          : resumes.map(resume => <ResumeCard key={resume.id} id={resume.id} name={resume.basicInfo.name} onDelete={() => deleteHandler(resume.id)} />)          
+        }
       </div>
     </Layout>
   );

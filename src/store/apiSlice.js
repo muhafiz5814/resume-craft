@@ -14,13 +14,23 @@ export const resumeApi = createApi({
   }),
   endpoints: (build) => ({
     getResumes: build.query({
-      query: () => "resumes"
+      query: () => "resumes",
+      providesTags: ["Resumes"]
     }),
 
     getResume: build.query({
-      query: (id) => `resumes/${id}`
+      query: (id) => `resumes/${id}`,
+      providesTags: ["Resume"]
+    }),
+
+    deleteResume: build.mutation({
+      query: (id) => ({
+        url: `resumes/${id}`,
+        method: `DELETE`
+      }),
+      invalidatesTags: ["Resumes", "Resume"]
     })
   })
 })
 
-export const {useGetResumesQuery, useGetResumeQuery} = resumeApi
+export const {useGetResumesQuery, useGetResumeQuery, useDeleteResumeMutation} = resumeApi

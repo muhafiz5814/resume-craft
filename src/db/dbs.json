@@ -3,7 +3,101 @@
     {
       "id": 1,
       "basicInfo": {
-        "name": "Raza",
+        "name": "Raza1",
+        "designation": "Web Developer",
+        "address": "Rajasthan",
+        "email": "something@mail.com",
+        "phone": "1212343456",
+        "website": "https://www.linkedin.com"
+      },
+      "aboutMe": "A passionate web developer.",
+      "education":  [
+          {
+            "id": "ed1",
+            "school": "Pragati Public Sr. Sec. School",
+            "start-year": "2015",
+            "end-year": "2017",
+            "descriptions": "Higher education"
+          }
+        ],
+      "experience": [
+          {
+            "id": "e1",
+            "designation": "Web Developer intern",
+            "organization": "Google",
+            "tenure": "2021-2022",
+            "location": "India",
+            "description": "Worked as a web developer intern in maps team"
+          }
+        ],
+      "projects": [
+        {
+          "id": "p1",
+          "title": "ShopCart",
+          "tenure": "2023",
+          "url": "some url",
+          "description": "A React App made to practice and understand the concept of state management using Redux."
+        }
+      ],
+      "skills": [
+        {
+          "id": "s1",
+          "skill": "Web Development",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "basicInfo": {
+        "name": "Raza2",
+        "designation": "Web Developer",
+        "address": "Rajasthan",
+        "email": "something@mail.com",
+        "phone": "1212343456",
+        "website": "https://www.linkedin.com"
+      },
+      "aboutMe": "A passionate web developer.",
+      "education":  [
+          {
+            "id": "ed1",
+            "school": "Pragati Public Sr. Sec. School",
+            "start-year": "2015",
+            "end-year": "2017",
+            "descriptions": "Higher education"
+          }
+        ],
+      "experience": [
+          {
+            "id": "e1",
+            "designation": "Web Developer intern",
+            "organization": "Google",
+            "tenure": "2021-2022",
+            "location": "India",
+            "description": "Worked as a web developer intern in maps team"
+          }
+        ],
+      "projects": [
+        {
+          "id": "p1",
+          "title": "ShopCart",
+          "tenure": "2023",
+          "url": "some url",
+          "description": "A React App made to practice and understand the concept of state management using Redux."
+        }
+      ],
+      "skills": [
+        {
+          "id": "s1",
+          "skill": "Web Development",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "basicInfo": {
+        "name": "Raza3",
         "designation": "Web Developer",
         "address": "Rajasthan",
         "email": "something@mail.com",
