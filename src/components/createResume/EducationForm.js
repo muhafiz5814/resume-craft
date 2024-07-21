@@ -1,6 +1,7 @@
 import { addEducation, updateEducation } from "../../store/tempResumeSlice"
 import { shallowEqual, useDispatch, useSelector } from "react-redux"
 import Input from "./Input"
+import TextArea from "./TextArea"
 
 const EducationForm = () => {
 
@@ -8,7 +9,7 @@ const EducationForm = () => {
     school: "",
     startYear: "",
     endYear: "",
-    descriptions: ""
+    description: ""
   }
 
 
@@ -33,17 +34,21 @@ const EducationForm = () => {
       {education 
         ? education.map((item, index) => 
           Object.keys(item).map(key => ( key !== "id" &&
-            <Input
-              key={key}
-              type={
-                key.includes("Year") ? "month"
-                : "text"
-              }
-              name={key}
-              label={capFirstLetter(key)}
-              value={item[key]}
-              onChangeHandler={(evt) => handleChange(evt, index)}
-            />
+            (key === "description" 
+              ?
+                <TextArea key={key} name={key} label={capFirstLetter(key)} value={item[key]} onChangeHandler={(evt) => handleChange(evt, index)}/>
+              : <Input
+                  key={key}
+                  type={
+                    key.includes("Year") ? "month"
+                    : "text"
+                  }
+                  name={key}
+                  label={capFirstLetter(key)}
+                  value={item[key]}
+                  onChangeHandler={(evt) => handleChange(evt, index)}
+                />
+            )
           ))
         )
         : <p>Loading...</p>

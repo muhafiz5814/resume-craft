@@ -17,7 +17,7 @@ const initialData = {
         school: "",
         startYear: "",
         endYear: "",
-        descriptions: ""
+        description: ""
       }
     ],
   experience: [
