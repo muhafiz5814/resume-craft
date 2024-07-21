@@ -1,9 +1,10 @@
 import Layout from "../Layout"
+import BasicInfoForm from "./BasicInfoForm"
 
 const CreateResume = () => {
   return (
     <Layout>
-      <h2>Create Resume</h2>
+      <BasicInfoForm />
     </Layout>
   )
 }
