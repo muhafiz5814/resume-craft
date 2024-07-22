@@ -1,6 +1,7 @@
 import Education from "./Education"
 import { shallowEqual, useSelector } from "react-redux"
 
+// same as aboutMe
 const EducationDetails = () => {
 
   const { education }= useSelector(state => state.localResume, shallowEqual)

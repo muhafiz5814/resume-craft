@@ -1,6 +1,7 @@
 import Project from "./Project"
 import { shallowEqual, useSelector } from "react-redux"
 
+// same as aboutMe
 const Projects = () => {
 
   const { projects }= useSelector(state => state.localResume, shallowEqual)

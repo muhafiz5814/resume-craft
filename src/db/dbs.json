@@ -1,44 +1,48 @@
 {
   "resumes": [
     {
-      "id": "nUBY_rQOXdF_pSW8dCjUE",
+      "id": "DSfQoS0vDdlKAwIEXTR7A",
       "basicInfo": {
-        "name": "Raza",
-        "designation": "Web Developer",
-        "address": "Rajasthan",
-        "email": "muha@gmail.com",
+        "name": "Raza1",
+        "designation": "web",
+        "address": "raj",
+        "email": "some@gmail.com",
         "phone": "1212121212",
         "website": ""
       },
-      "aboutMe": "I am a web developer",
+      "aboutMe": "nice",
       "education": [
         {
-          "school": "Amandeep",
+          "school": "aman",
           "startYear": "2024-01",
-          "endYear": "2024-03",
-          "description": "Nice"
+          "endYear": "2024-02",
+          "description": "good"
         }
       ],
       "experience": [
         {
-          "designation": "intern",
-          "organization": "google",
-          "startYear": "2023-02",
-          "endYear": "2023-07",
-          "location": "usa",
+          "designation": "web development",
+          "organization": "amazon",
+          "startYear": "2023-01",
+          "endYear": "2024-01",
+          "location": "ind",
           "description": "good"
         }
       ],
       "projects": [
         {
           "title": "shopcart",
-          "startMonth": "2024-03",
-          "endMonth": "2024-04",
-          "url": "https://www.linkedin.com",
-          "description": "hey everyone"
+          "startMonth": "2024-01",
+          "endMonth": "2024-02",
+          "url": "www.project.com",
+          "description": "a good project"
         }
       ],
       "skills": [
+        {
+          "skill": "clout",
+          "rating": "2"
+        },
         {
           "skill": "web development",
           "rating": "3"

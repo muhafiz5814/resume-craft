@@ -1,3 +1,4 @@
+// A local store state of resume to be used by components to show on UI
 import { createSlice } from "@reduxjs/toolkit";
 
 const localDataSlice = createSlice({

@@ -1,3 +1,4 @@
+// Component to render the multiple project items on UI
 const Project = ({title, startOn, endOn, url, description}) => {
   return (
     <div className="project-div sub-container">

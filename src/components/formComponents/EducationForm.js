@@ -5,6 +5,7 @@ import TextArea from "./TextArea"
 
 const EducationForm = () => {
 
+  // Use this empty object to initialize a new education item in education section.
   const emptyEducation = {
     school: "",
     startYear: "",
@@ -16,6 +17,7 @@ const EducationForm = () => {
   const dispatch = useDispatch()
   const {education} = useSelector(state => state.tempResume, shallowEqual)
 
+  // To update the input, value of index is needed as there can be multiple instances of education in the form element and to keep track of respective input fields, index and key pair is used.
   const handleChange = (evt, index) => {
     evt.preventDefault()
     const {name, value} = evt.target
@@ -31,12 +33,13 @@ const EducationForm = () => {
     <div className="education-form form-block">
       <div className="heading">
         <h3 className="title">Education</h3>
+        {/* When the + button is clicked, a new empty item object is created in education section. */}
         <button className="more-btn" onClick={() => dispatch(addEducation(emptyEducation))}>+</button>
       </div>
       <div className="input-fields">
         {education 
           ? education.map((item, index) => 
-            <div className="section-item">
+            <div className="section-item">  
               {Object.keys(item).map(key => ( key !== "id" &&
                 (key === "description" 
                   ?

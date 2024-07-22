@@ -1,3 +1,4 @@
+// configure the store
 import { configureStore } from "@reduxjs/toolkit";
 import { resumeApi } from "./apiSlice";
 import {localDataReducer} from "./localDataSlice"

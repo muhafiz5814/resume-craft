@@ -15,22 +15,26 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { setTempResume, clearTempResume } from "../../store/tempResumeSlice";
 
+// To update the resume, use same steps as in creating the resume
+// First initialize the local state with the resume to update
+// Do all the mutation in local state available in store
+// Once done get the state value from local store, send the state value to server.
+// Navigate back to the home page.
 const UpdateResume = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  console.log("id", id);
+
   const dispatch = useDispatch();
   const resumeData = useSelector((state) => state.tempResume);
-  console.log("resumeData at start ", resumeData);
-  let loaded = false;
 
   const { data, isLoading, error } = useGetResumeQuery(id);
   const [updateResume, { isloading }] = useUpdateResumeMutation();
 
-  console.log("Before useeffect 1 data", data);
+
   useEffect(() => {
-    console.log("inside use effect 1");
+
     if (data) {
+      // Do not want to send the id field as the local store state does not have that field.
       const resume = {
         basicInfo: data.basicInfo,
         aboutMe: data.aboutMe,
@@ -39,28 +43,15 @@ const UpdateResume = () => {
         projects: data.projects,
         skills: data.skills,
       };
-      console.log("resume: ", resume);
+
       dispatch(setTempResume(resume));
-      console.log("After the dispatch");
+
     }
   }, [data, dispatch]);
-  console.log("After useeffect 1 data", data);
 
-  console.log("Loaded before use effect2: ", loaded);
-
-  // useEffect(() => {
-  //   console.log("inside use effect 2")
-  //   console.log("resumeData.aboutMe", resumeData.aboutMe)
-  //   if(resumeData.aboutMe){
-  //     console.log("inside resemeData useEffect: ", resumeData.aboutMe)
-  //     loaded = true;
-  //   }
-  // }, [resumeData, loaded])
-
-  console.log("Loaded After use effect2: ", loaded);
+  // send data to server and then clear the local store state.
   const handleSubmit = (evt, id) => {
     evt.preventDefault();
-    console.log(resumeData);
     updateResume({ id, updatedResume: { id, ...resumeData } });
     dispatch(clearTempResume());
     navigate("/");

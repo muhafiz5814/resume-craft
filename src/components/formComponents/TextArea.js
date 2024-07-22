@@ -1,3 +1,4 @@
+// Input component to use in other form sections
 const TextArea = ({label, name, value, onChangeHandler, required = true}) => {
   return (
     <label>

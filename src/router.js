@@ -1,3 +1,4 @@
+// Creates all the routes required in application.
 import {
   createBrowserRouter,
   createRoutesFromElements,

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 
+// Resume card component has 4 items name, link to view full resume, link to edit resume and delete button
 const ResumeCard = ({id, name, onDelete}) => {
   return (
     <div className="resume-card">

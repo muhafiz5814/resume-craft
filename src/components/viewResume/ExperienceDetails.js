@@ -1,6 +1,7 @@
 import Experience from "./Experience"
 import { shallowEqual, useSelector } from "react-redux"
 
+// same as aboutMe
 const ExperienceDetails = () => {
 
   const { experience }= useSelector(state => state.localResume, shallowEqual)

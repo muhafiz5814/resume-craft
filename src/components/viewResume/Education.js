@@ -1,3 +1,4 @@
+// Component to render the multiple education items on UI
 const Education = ({school, startYear, endYear, description}) => {
   return (
     <div className="education-div sub-container">

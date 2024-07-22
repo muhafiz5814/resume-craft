@@ -4,8 +4,10 @@ import Input from "./Input"
 const BasicInfoForm = () => {
 
   const dispatch = useDispatch()
+  // Get only basic info section from state to pre fill the fields with the value
   const {basicInfo} = useSelector(state => state.tempResume, shallowEqual)
 
+  // continuosly change the local store state as the value changes in input field using controlled forms
   const handleChange = (evt) => {
     evt.preventDefault()
     const propName = evt.target.name
@@ -13,6 +15,7 @@ const BasicInfoForm = () => {
     dispatch(updateBasicInfo({[propName]: value}))
   }
 
+// capitalize the first letter of label
   const capFirstLetter = (str) => {
     return str[0].toUpperCase() + str.slice(1)
   }
@@ -27,7 +30,7 @@ const BasicInfoForm = () => {
           ? Object.keys(basicInfo).map(key => (
             <Input
               key={key}
-              type={
+              type={  //  Assign the type of input, based on the field type
                 key === "website" ? "url"
                 : key === "phone" ? "phone"
                 : key === "email" ? "email"

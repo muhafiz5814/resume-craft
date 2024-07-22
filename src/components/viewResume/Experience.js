@@ -1,3 +1,4 @@
+// Component to render the multiple experience items on UI
 const Experience = ({designation, organization, startYear, endYear, location, description}) => {
   return (
     <div className="experience-div sub-container">

@@ -3,7 +3,7 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux"
 import Input from "./Input"
 import TextArea from "./TextArea"
 
-
+// same as Education project
 const ProjectsForm = () => {
 
   const emptyProject = {

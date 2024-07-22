@@ -7,6 +7,7 @@ import { clearTempResume } from "../../store/tempResumeSlice";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
+// first get the data from server and then show on UI
 const Home = () => {
   const dispatch = useDispatch()
   useEffect(() => {
@@ -14,9 +15,10 @@ const Home = () => {
   },[])
 
   const { data: resumes, isLoading, error } = useGetResumesQuery();
-  console.log(resumes);
+
   const [deleteResume] = useDeleteResumeMutation()
 
+  // Before deleting the item, ask for confirmation from user.
   const deleteHandler = (id) => {
     const confirm = window.confirm("Do you want to delete item?")
     if(confirm) deleteResume(id)

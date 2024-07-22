@@ -1,6 +1,7 @@
 import Skill from "./Skill"
 import { shallowEqual, useSelector } from "react-redux"
 
+// same as aboutMe
 const Skills = () => {
 
   const { skills }= useSelector(state => state.localResume, shallowEqual)

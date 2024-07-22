@@ -1,5 +1,6 @@
 import { shallowEqual, useSelector } from "react-redux"
 
+// same ia aboutMe
 const BasicInfo = () => {
 
   const { basicInfo }= useSelector(state => state.localResume, shallowEqual)

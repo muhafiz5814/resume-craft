@@ -1,3 +1,5 @@
+// A temporary local store state to help in creating and updating the resumes.
+
 import { createSlice} from "@reduxjs/toolkit";
 
 const initialData = {

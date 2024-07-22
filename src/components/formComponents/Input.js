@@ -1,3 +1,4 @@
+// Input component to use in other form sections
 const Input = ({label, type = "text", name, value, onChangeHandler, required = true}) => {
   return (
     <label>

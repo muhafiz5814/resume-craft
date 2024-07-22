@@ -2,6 +2,7 @@ import { addSkill, updateSkills } from "../../store/tempResumeSlice"
 import { shallowEqual, useDispatch, useSelector } from "react-redux"
 import Input from "./Input"
 
+// same as education form
 const SkillsForm = () => {
 
   const emptySkill = {
