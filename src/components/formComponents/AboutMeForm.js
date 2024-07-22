@@ -14,9 +14,13 @@ const AboutMeForm = () => {
   }
 
   return (
-    <div className="about-me-form">
-      <h3>AboutMe</h3>
-      <TextArea label="AboutMe" name="about" value={aboutMe} onChangeHandler={handleChange} />
+    <div className="about-me-form form-block">
+      <div className="heading">
+        <h3 className="title">AboutMe</h3>
+      </div>
+      <div className="input-fields">
+        <TextArea label="AboutMe" name="about" value={aboutMe} onChangeHandler={handleChange} />
+      </div>
     </div>
   )
 }

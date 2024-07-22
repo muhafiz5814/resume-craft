@@ -6,7 +6,7 @@ const Skills = () => {
   const { skills }= useSelector(state => state.localResume, shallowEqual)
 
   return (
-    <div className="skills-div">
+    <div className="skills-div container">
       <div className="title"><h2>Skills</h2></div>
       <div className="content">
         {skills

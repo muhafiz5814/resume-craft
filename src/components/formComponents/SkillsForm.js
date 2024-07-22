@@ -24,27 +24,34 @@ const SkillsForm = () => {
   }
 
   return (
-    <div className="skills-form">
-      <h3>Skills</h3>
-      <button onClick={() => dispatch(addSkill(emptySkill))}>+</button>
-      {skills 
-        ? skills.map((item, index) => 
-          Object.keys(item).map(key => ( key !== "id" &&
-            <Input
-              key={key}
-              type={
-                key === "skill" ? "text"
-                : "number"
-              }
-              name={key}
-              label={capFirstLetter(key)}
-              value={item[key]}
-              onChangeHandler={(evt) => handleChange(evt, index)}
-            />
-          ))
-        )
-        : <p>Loading...</p>
-      }
+    <div className="skills-form form-block">
+      <div className="heading">
+        <h3 className="title">Skills</h3>
+        <button className="more-btn" onClick={() => dispatch(addSkill(emptySkill))}>+</button>
+      </div>
+      <div className="input-fields">
+        {skills 
+          ? skills.map((item, index) => 
+            <div className="section-item">
+              {Object.keys(item).map(key => ( key !== "id" &&
+                <Input
+                  key={key}
+                  type={
+                    key === "skill" ? "text"
+                    : "number"
+                  }
+                  name={key}
+                  label={capFirstLetter(key)}
+                  value={item[key]}
+                  onChangeHandler={(evt) => handleChange(evt, index)}
+                />
+              ))}
+            </div>
+          )
+          : <p>Loading...</p>
+        }
+      </div>
+      
     </div>
   )
 }

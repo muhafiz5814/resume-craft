@@ -29,10 +29,12 @@ const Home = () => {
             Create Resume
           </Link>
         </div>
-        {isLoading 
-          ? <h2>Please wait...</h2> 
-          : resumes.map(resume => <ResumeCard key={resume.id} id={resume.id} name={resume.basicInfo.name} onDelete={() => deleteHandler(resume.id)} />)          
-        }
+        <div className="resume-cards">
+          {isLoading 
+            ? <h2>Please wait...</h2> 
+            : resumes.map(resume => <ResumeCard key={resume.id} id={resume.id} name={resume.basicInfo.name} onDelete={() => deleteHandler(resume.id)} />)          
+          }
+        </div>
       </div>
     </Layout>
   );

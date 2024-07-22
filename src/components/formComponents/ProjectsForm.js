@@ -29,31 +29,39 @@ const ProjectsForm = () => {
   }
 
   return (
-    <div className="projects-form">
-      <h3>Projects</h3>
-      <button onClick={() => dispatch(addProject(emptyProject))}>+</button>
-      {projects 
-        ? projects.map((item, index) => 
-          Object.keys(item).map(key => ( key !== "id" &&
-            (key === "description" 
-              ?
-                <TextArea key={key} name={key} label={capFirstLetter(key)} value={item[key]} onChangeHandler={(evt) => handleChange(evt, index)}/>
-              : <Input
-                  key={key}
-                  type={
-                    key.includes("Month") ? "month"
-                    : "text"
-                  }
-                  name={key}
-                  label={capFirstLetter(key)}
-                  value={item[key]}
-                  onChangeHandler={(evt) => handleChange(evt, index)}
-                />
-            )
-          ))
-        )
-        : <p>Loading...</p>
-      }
+    <div className="projects-form form-block">
+      <div className="heading">
+        <h3 className="title">Projects</h3>
+        <button className="more-btn" onClick={() => dispatch(addProject(emptyProject))}>+</button>
+      </div>
+      <div className="input-fields">
+        {projects 
+          ? projects.map((item, index) => 
+            <div className="section-item">
+              {
+                Object.keys(item).map(key => ( key !== "id" &&
+                  (key === "description" 
+                    ?
+                      <TextArea key={key} name={key} label={capFirstLetter(key)} value={item[key]} onChangeHandler={(evt) => handleChange(evt, index)}/>
+                    : <Input
+                        key={key}
+                        type={
+                          key.includes("Month") ? "month"
+                          : "text"
+                        }
+                        name={key}
+                        label={capFirstLetter(key)}
+                        value={item[key]}
+                        onChangeHandler={(evt) => handleChange(evt, index)}
+                      />
+                  )
+                ))
+              }  
+            </div>
+          )
+          : <p>Loading...</p>
+        }
+      </div>
     </div>
   )
 }

@@ -6,7 +6,7 @@ const ExperienceDetails = () => {
   const { experience }= useSelector(state => state.localResume, shallowEqual)
 
   return (
-    <div className="experience-details-div">
+    <div className="experience-details-div container">
       <div className="title"><h2>Experience</h2></div>
       <div className="content">
         {experience

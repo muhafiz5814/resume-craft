@@ -5,7 +5,7 @@ const AboutMe = () => {
   const { aboutMe }= useSelector(state => state.localResume, shallowEqual)
 
   return (
-    <div className="about-me-div">
+    <div className="about-me-div container">
       <div className="title"><h2>About Me</h2></div>
       <div className="content">
         {aboutMe

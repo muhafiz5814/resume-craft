@@ -1,3 +1,4 @@
+import "../../forms.css"
 import Layout from "../Layout";
 import AboutMeForm from "../formComponents/AboutMeForm";
 import BasicInfoForm from "../formComponents/BasicInfoForm";
@@ -25,15 +26,18 @@ const CreateResume = () => {
 
   return (
     <Layout>
-      <form onSubmit={handleSubmit}>
-        <BasicInfoForm />
-        <AboutMeForm />
-        <EducationForm />
-        <ExperienceForm />
-        <Form />
-        <SkillsForm />
-        <button type="submit">Submit</button>
-      </form>
+      <div className="resume-form-container">
+        <form onSubmit={handleSubmit}>
+          <BasicInfoForm />
+          <AboutMeForm />
+          <EducationForm />
+          <ExperienceForm />
+          <Form />
+          <SkillsForm />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      
     </Layout>
   );
 };

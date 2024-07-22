@@ -28,31 +28,38 @@ const EducationForm = () => {
   }
 
   return (
-    <div className="education-form">
-      <h3>Education</h3>
-      <button onClick={() => dispatch(addEducation(emptyEducation))}>+</button>
-      {education 
-        ? education.map((item, index) => 
-          Object.keys(item).map(key => ( key !== "id" &&
-            (key === "description" 
-              ?
-                <TextArea key={key} name={key} label={capFirstLetter(key)} value={item[key]} onChangeHandler={(evt) => handleChange(evt, index)}/>
-              : <Input
-                  key={key}
-                  type={
-                    key.includes("Year") ? "month"
-                    : "text"
-                  }
-                  name={key}
-                  label={capFirstLetter(key)}
-                  value={item[key]}
-                  onChangeHandler={(evt) => handleChange(evt, index)}
-                />
-            )
-          ))
-        )
-        : <p>Loading...</p>
-      }
+    <div className="education-form form-block">
+      <div className="heading">
+        <h3 className="title">Education</h3>
+        <button className="more-btn" onClick={() => dispatch(addEducation(emptyEducation))}>+</button>
+      </div>
+      <div className="input-fields">
+        {education 
+          ? education.map((item, index) => 
+            <div className="section-item">
+              {Object.keys(item).map(key => ( key !== "id" &&
+                (key === "description" 
+                  ?
+                    <TextArea key={key} name={key} label={capFirstLetter(key)} value={item[key]} onChangeHandler={(evt) => handleChange(evt, index)}/>
+                  : <Input
+                      key={key}
+                      type={
+                        key.includes("Year") ? "month"
+                        : "text"
+                      }
+                      name={key}
+                      label={capFirstLetter(key)}
+                      value={item[key]}
+                      onChangeHandler={(evt) => handleChange(evt, index)}
+                    />
+                )
+              ))
+              }
+            </div>
+          )
+          : <p>Loading...</p>
+        }
+      </div>
     </div>
   )
 }

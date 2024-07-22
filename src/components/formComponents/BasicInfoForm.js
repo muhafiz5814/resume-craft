@@ -18,28 +18,31 @@ const BasicInfoForm = () => {
   }
 
   return (
-    <div className="basic-info-form">
-      <h3>BasicInfo</h3>
-      {basicInfo 
-        ? Object.keys(basicInfo).map(key => (
-          <Input
-            key={key}
-            type={
-              key === "website" ? "url"
-              : key === "phone" ? "phone"
-              : key === "email" ? "email"
-              : "text"
-            }
-            name={key}
-            label={capFirstLetter(key)}
-            value={basicInfo[key]}
-            onChangeHandler={handleChange}
-            required={key !== "website"}
-          />
-        ))
-        : <p>Loading...</p>
-
-      }
+    <div className="basic-info-form form-block">
+      <div className="heading">
+        <h3 className="title">BasicInfo</h3>
+      </div>
+      <div className="input-fields">
+        {basicInfo 
+          ? Object.keys(basicInfo).map(key => (
+            <Input
+              key={key}
+              type={
+                key === "website" ? "url"
+                : key === "phone" ? "phone"
+                : key === "email" ? "email"
+                : "text"
+              }
+              name={key}
+              label={capFirstLetter(key)}
+              value={basicInfo[key]}
+              onChangeHandler={handleChange}
+              required={key !== "website"}
+            />
+          ))
+          : <p>Loading...</p>
+        }
+      </div>
     </div>
   )
 }

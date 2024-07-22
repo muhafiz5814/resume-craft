@@ -1,133 +1,47 @@
 {
   "resumes": [
     {
-      "id": 1,
+      "id": "nUBY_rQOXdF_pSW8dCjUE",
       "basicInfo": {
-        "name": "Raza1",
+        "name": "Raza",
         "designation": "Web Developer",
         "address": "Rajasthan",
-        "email": "something@mail.com",
-        "phone": "1212343456",
-        "website": "https://www.linkedin.com"
+        "email": "muha@gmail.com",
+        "phone": "1212121212",
+        "website": ""
       },
-      "aboutMe": "A passionate web developer.",
+      "aboutMe": "I am a web developer",
       "education": [
         {
-          "school": "Pragati Public Sr. Sec. School",
-          "startYear": "2015",
-          "endYear": "2017",
-          "descriptions": "Higher education"
+          "school": "Amandeep",
+          "startYear": "2024-01",
+          "endYear": "2024-03",
+          "description": "Nice"
         }
       ],
       "experience": [
         {
-          "designation": "Web Developer intern",
-          "organization": "Google",
-          "startYear": "2015",
-          "endYear": "2017",
-          "location": "India",
-          "description": "Worked as a web developer intern in maps team"
+          "designation": "intern",
+          "organization": "google",
+          "startYear": "2023-02",
+          "endYear": "2023-07",
+          "location": "usa",
+          "description": "good"
         }
       ],
       "projects": [
         {
-          "title": "ShopCart",
-          "startOn": "2015",
-          "endOn": "2015",
+          "title": "shopcart",
+          "startMonth": "2024-03",
+          "endMonth": "2024-04",
           "url": "https://www.linkedin.com",
-          "description": "A React App made to practice and understand the concept of state management using Redux."
+          "description": "hey everyone"
         }
       ],
       "skills": [
         {
-          "skill": "Web Development",
-          "rating": 4
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "basicInfo": {
-        "name": "Raza2",
-        "designation": "Web Developer",
-        "address": "Rajasthan",
-        "email": "something@mail.com",
-        "phone": "1212343456",
-        "website": "https://www.linkedin.com"
-      },
-      "aboutMe": "A passionate web ",
-      "education": [
-        {
-          "school": "Pragati Public Sr. Sec. School",
-          "start-year": "2015",
-          "end-year": "2017",
-          "descriptions": "Higher"
-        }
-      ],
-      "experience": [
-        {
-          "designation": "Web Developer intern",
-          "organization": "Google",
-          "tenure": "2021-2022",
-          "location": "India",
-          "description": "Worked as a web developer intern in team"
-        }
-      ],
-      "projects": [
-        {
-          "title": "ShopCart",
-          "tenure": "2023",
-          "url": "some",
-          "description": "A React App made to practice and understand the concept of state management using Redux."
-        }
-      ],
-      "skills": [
-        {
-          "skill": "Web ",
-          "rating": 4
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "basicInfo": {
-        "name": "Raza3",
-        "designation": "Web Developer",
-        "address": "Rajasthan",
-        "email": "something@mail.com",
-        "phone": "1212343456",
-        "website": "https://www.linkedin.com"
-      },
-      "aboutMe": "A passionate web developer.",
-      "education": [
-        {
-          "school": "Pragati Public Sr. Sec. School",
-          "start-year": "2015",
-          "end-year": "2017",
-          "descriptions": "Higher education"
-        }
-      ],
-      "experience": [
-        {
-          "designation": "Web Developer intern",
-          "organization": "Google",
-          "tenure": "2021-2022",
-          "location": "India",
-          "description": "Worked as a web developer intern in maps team"
-        }
-      ],
-      "projects": [
-        {
-          "title": "ShopCart",
-          "tenure": "2023",
-          "url": "some url",
-          "description": "A React App made to practice and understand the concept of state management using Redux."
-        }
-      ],
-      "skills": [
-        {
-          "skill": "Web Development",
-          "rating": 4
+          "skill": "web development",
+          "rating": "3"
         }
       ]
     }

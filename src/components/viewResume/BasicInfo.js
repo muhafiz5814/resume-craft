@@ -5,7 +5,7 @@ const BasicInfo = () => {
   const { basicInfo }= useSelector(state => state.localResume, shallowEqual)
 
   return (
-    <div className="basic-info-div">
+    <div className="basic-info-div container">
       <div className="title"><h2>Basic Info</h2></div>
       <div className="content">
         {basicInfo

@@ -3,17 +3,17 @@ import { Link } from "react-router-dom"
 const ResumeCard = ({id, name, onDelete}) => {
   return (
     <div className="resume-card">
-      <div className="name-resume-card">{name}</div>
-      <div>
+      <div className="name-resume-card card-item">{name}</div>
+      <div className="card-item">
         <Link to={`/resume/${id}`}>
           View
         </Link>
       </div>
-      <div><Link to={`/update/${id}`}>
+      <div className="card-item"><Link to={`/update/${id}`}>
           Edit
         </Link>
       </div>
-      <div className="delete-resume-div"><span onClick={onDelete}>Delete</span></div>
+      <div className="delete-resume-div card-item" onClick={onDelete}><span>Delete</span></div>
     </div>
   )
 }

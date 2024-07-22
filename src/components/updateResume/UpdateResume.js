@@ -1,3 +1,4 @@
+import "../../forms.css"
 import { useEffect } from "react";
 import Layout from "../Layout";
 import AboutMeForm from "../formComponents/AboutMeForm";
@@ -68,15 +69,17 @@ const UpdateResume = () => {
   return (
     <Layout>
       {resumeData.aboutMe ? (
-        <form onSubmit={(evt) => handleSubmit(evt, id)}>
-          <BasicInfoForm />
-          <AboutMeForm />
-          <EducationForm />
-          <ExperienceForm />
-          <ProjectsForm />
-          <SkillsForm />
-          <button type="submit">Submit</button>
-        </form>
+        <div className="resume-form-container">
+          <form onSubmit={(evt) => handleSubmit(evt, id)}>
+            <BasicInfoForm />
+            <AboutMeForm />
+            <EducationForm />
+            <ExperienceForm />
+            <ProjectsForm />
+            <SkillsForm />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       ) : (
         <h2>Loading...</h2>
       )}
