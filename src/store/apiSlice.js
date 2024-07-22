@@ -33,6 +33,15 @@ export const resumeApi = createApi({
       invalidatesTags: ["Resumes"]
     }),
 
+    updateResume: build.mutation({
+      query: ({ id, updatedResume }) => ({
+        url: `/resumes/${id}`,
+        method: 'PUT',
+        body: updatedResume
+      }), 
+      invalidatesTags: ["Resumes", "Resume"]
+    }),
+
     deleteResume: build.mutation({
       query: (id) => ({
         url: `resumes/${id}`,
@@ -43,4 +52,4 @@ export const resumeApi = createApi({
   })
 })
 
-export const {useGetResumesQuery, useGetResumeQuery, useDeleteResumeMutation, useAddResumeMutation} = resumeApi
+export const {useGetResumesQuery, useGetResumeQuery, useDeleteResumeMutation, useAddResumeMutation, useUpdateResumeMutation} = resumeApi

@@ -8,10 +8,12 @@ import SkillsForm from "./SkillsForm"
 import { useAddResumeMutation } from "../../store/apiSlice"
 import { useDispatch, useSelector } from "react-redux"
 import { clearTempResume } from "../../store/tempResumeSlice"
+import { useNavigate } from "react-router-dom"
 
 
 const CreateResume = () => {
 
+  const navigate = useNavigate()
   const resume = useSelector(state => state.tempResume)
   const [addResume, {isLoading}] = useAddResumeMutation()
   const dispatch = useDispatch()
@@ -20,6 +22,7 @@ const CreateResume = () => {
     evt.preventDefault()
     addResume(resume)
     dispatch(clearTempResume())
+    navigate("/")
   }
 
   return (

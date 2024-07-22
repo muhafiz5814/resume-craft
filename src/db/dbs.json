@@ -55,13 +55,13 @@
         "phone": "1212343456",
         "website": "https://www.linkedin.com"
       },
-      "aboutMe": "A passionate web developer.",
+      "aboutMe": "A passionate web ",
       "education": [
         {
           "school": "Pragati Public Sr. Sec. School",
           "start-year": "2015",
           "end-year": "2017",
-          "descriptions": "Higher education"
+          "descriptions": "Higher"
         }
       ],
       "experience": [
@@ -70,20 +70,20 @@
           "organization": "Google",
           "tenure": "2021-2022",
           "location": "India",
-          "description": "Worked as a web developer intern in maps team"
+          "description": "Worked as a web developer intern in team"
         }
       ],
       "projects": [
         {
           "title": "ShopCart",
           "tenure": "2023",
-          "url": "some url",
+          "url": "some",
           "description": "A React App made to practice and understand the concept of state management using Redux."
         }
       ],
       "skills": [
         {
-          "skill": "Web Development",
+          "skill": "Web ",
           "rating": 4
         }
       ]

@@ -3,8 +3,16 @@ import Layout from "../Layout";
 import ResumeCard from "./ResumeCard";
 import { useDeleteResumeMutation, useGetResumesQuery } from "../../store/apiSlice";
 import { Link } from "react-router-dom";
+import { clearTempResume } from "../../store/tempResumeSlice";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 const Home = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(clearTempResume())
+  },[])
+
   const { data: resumes, isLoading, error } = useGetResumesQuery();
   console.log(resumes);
   const [deleteResume] = useDeleteResumeMutation()
