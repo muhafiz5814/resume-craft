@@ -31,10 +31,13 @@ const Home = () => {
             Create Resume
           </Link>
         </div>
+        {/* Show error if the application is not connecting to the server properly */}
         <div className="resume-cards">
           {isLoading 
-            ? <h2>Please wait...</h2> 
-            : resumes.map(resume => <ResumeCard key={resume.id} id={resume.id} name={resume.basicInfo.name} onDelete={() => deleteHandler(resume.id)} />)          
+            ? <h2>Please wait...</h2>
+            : error 
+              ? <p>Unable to fetch data, please ensure to use <span style={{color: "green"}}>"resumes"</span> as database name in json server instead of <span style={{color: "red"}}>"api"</span></p>
+              : resumes.map(resume => <ResumeCard key={resume.id} id={resume.id} name={resume.basicInfo.name} onDelete={() => deleteHandler(resume.id)} />)          
           }
         </div>
       </div>
