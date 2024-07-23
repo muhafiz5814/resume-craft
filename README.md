@@ -23,3 +23,6 @@ A resume craft react application which helps in creating, updating and viewing r
 
 ### Run using surge
 To run using surge on local computer, first run the local server at port 3030 as it will interact with it.
+
+## Note: 
+Updates to this project such as code optimisation, new feature addition and other updates will be maintained in "updatesAfterSubmission" branch until evaluation completes. Checkout to see the updates and optimisations.
