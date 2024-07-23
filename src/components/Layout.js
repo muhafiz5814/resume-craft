@@ -1,3 +1,4 @@
+// Outer layout of the site, to be used with other components.
 import "./Layout.css"
 import { Link } from 'react-router-dom';
 

@@ -4,7 +4,7 @@ import Input from "./Input"
 const BasicInfoForm = () => {
 
   const dispatch = useDispatch()
-  // Get only basic info section from state to pre fill the fields with the value
+  // Get the basicInfo section data from local store state and fill values in input fields of component
   const {basicInfo} = useSelector(state => state.tempResume, shallowEqual)
 
   // continuosly change the local store state as the value changes in input field using controlled forms

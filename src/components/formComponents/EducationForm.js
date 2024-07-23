@@ -15,6 +15,7 @@ const EducationForm = () => {
 
 
   const dispatch = useDispatch()
+  // Get the education section data from local store state and fill values in input fields of component
   const {education} = useSelector(state => state.tempResume, shallowEqual)
 
   // To update the input, value of index is needed as there can be multiple instances of education in the form element and to keep track of respective input fields, index and key pair is used.

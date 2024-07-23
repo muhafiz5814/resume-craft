@@ -9,13 +9,16 @@ import { useEffect } from "react";
 
 // first get the data from server and then show on UI
 const Home = () => {
+  // When come creating or updating resume page, ensure to clear the tempResume.
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(clearTempResume())
   },[])
 
+  // fetch data from server using query hook
   const { data: resumes, isLoading, error } = useGetResumesQuery();
 
+  // get deleteResume method from mutation hook
   const [deleteResume] = useDeleteResumeMutation()
 
   // Before deleting the item, ask for confirmation from user.

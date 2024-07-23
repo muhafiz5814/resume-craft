@@ -5,8 +5,10 @@ import TextArea from "./TextArea"
 const AboutMeForm = () => {
 
   const dispatch = useDispatch()
+  // Get the aboutMe section data from local store state and fill values in input fields of component
   const {aboutMe} = useSelector(state => state.tempResume, shallowEqual)
 
+  // Changes the value in local store state as the input field value changes
   const handleChange = (evt) => {
     evt.preventDefault()
     const value = evt.target.value

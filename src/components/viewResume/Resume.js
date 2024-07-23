@@ -17,11 +17,14 @@ import { useDispatch} from "react-redux"
 // Use this local store state to access individual section data from perticular section component.
 const Resume = () => {
 
+  // get id value from url parameters using useParams hook
   const {id} = useParams()
   const dispatch = useDispatch()
   
+  // Get a single resume from server with id
   const {data, isLoading} = useGetResumeQuery(id)
 
+  // Set the local store state with recieved data
   useEffect(() => {
     if (data) {
       dispatch(setResume(data));

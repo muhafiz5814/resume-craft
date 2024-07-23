@@ -17,6 +17,7 @@ import { setTempResume, clearTempResume } from "../../store/tempResumeSlice";
 
 // To update the resume, use same steps as in creating the resume
 // First initialize the local state with the resume to update
+// Get the data form local store state and pre fill the form components to update.
 // Do all the mutation in local state available in store
 // Once done get the state value from local store, send the state value to server.
 // Navigate back to the home page.
@@ -30,7 +31,7 @@ const UpdateResume = () => {
   const { data, isLoading, error } = useGetResumeQuery(id);
   const [updateResume, { isloading }] = useUpdateResumeMutation();
 
-
+// This useEffect will be used to initialize the local store state with the server recieved data.
   useEffect(() => {
 
     if (data) {
@@ -49,7 +50,7 @@ const UpdateResume = () => {
     }
   }, [data, dispatch]);
 
-  // send data to server and then clear the local store state.
+  // send data to server and then clear the local store state and navigate to home page.
   const handleSubmit = (evt, id) => {
     evt.preventDefault();
     updateResume({ id, updatedResume: { id, ...resumeData } });
