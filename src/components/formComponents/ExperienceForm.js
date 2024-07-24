@@ -39,12 +39,17 @@ const ExperienceForm = () => {
       <div className="input-fields">
         {experience 
           ? experience.map((item, index) => 
-            <div className="section-item">
+            <div key={index} className="section-item">
               {
                 Object.keys(item).map(key => ( key !== "id" &&
                   (key === "description" 
                     ?
-                      <TextArea key={key} name={key} label={capFirstLetter(key)} value={item[key]} onChangeHandler={(evt) => handleChange(evt, index)}/>
+                      <TextArea 
+                        key={key} 
+                        name={key} 
+                        label={capFirstLetter(key)} 
+                        value={item[key]} 
+                        nChangeHandler={(evt) => handleChange(evt, index)}/>
                     : <Input
                         key={key}
                         type={
