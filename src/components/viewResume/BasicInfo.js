@@ -16,7 +16,7 @@ const BasicInfo = () => {
               <p>{basicInfo.address} | {basicInfo.email} | {basicInfo.phone}</p>
               <p>Website: <a href={basicInfo.website} target="_blank">{basicInfo.website}</a></p>
             </>
-          : <h2>Waiting...</h2>
+          : <h2>Loading...</h2>
         }
       </div>
     </div>
