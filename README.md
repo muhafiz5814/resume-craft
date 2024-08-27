@@ -24,5 +24,62 @@ A resume craft react application which helps in creating, updating and viewing r
 ### Run using surge
 To run using surge on local computer, first run the local server at port 3030 as it will interact with it.
 
+#### Structure of json server database
+```json
+{
+  "resumes": [
+    {
+      "id": "DSfQoS0vDdlKAwIEXTR7A",
+      "basicInfo": {
+        "name": "Babil",
+        "designation": "Developer",
+        "address": "India",
+        "email": "some@gmail.com",
+        "phone": "1212121212",
+        "website": ""
+      },
+      "aboutMe": "Tell something about yourself",
+      "education": [
+        {
+          "school": "Aman",
+          "startYear": "2024-01",
+          "endYear": "2024-02",
+          "description": "Higher Education"
+        }
+      ],
+      "experience": [
+        {
+          "designation": "Web developmer",
+          "organization": "Microsoft",
+          "startYear": "2023-01",
+          "endYear": "2024-01",
+          "location": "India",
+          "description": "Worked as an intern in Git team."
+        }
+      ],
+      "projects": [
+        {
+          "title": "shopcart",
+          "startMonth": "2024-01",
+          "endMonth": "2024-02",
+          "url": "www.project.com",
+          "description": "A good project"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "cloud",
+          "rating": "2"
+        },
+        {
+          "skill": "web development",
+          "rating": "4"
+        }
+      ]
+    }
+  ]
+}
+```
+
 ## Note: 
 Updates to this project such as code optimisation, new feature addition and other updates will be maintained in "updatesAfterSubmission" branch until evaluation completes. Checkout to see the updates and optimisations.

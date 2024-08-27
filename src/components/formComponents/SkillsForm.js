@@ -33,7 +33,7 @@ const SkillsForm = () => {
       <div className="input-fields">
         {skills 
           ? skills.map((item, index) => 
-            <div className="section-item">
+            <div key={index} className="section-item">
               {Object.keys(item).map(key => ( key !== "id" &&
                 <Input
                   key={key}
