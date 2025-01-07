@@ -49,7 +49,7 @@ const ExperienceForm = () => {
                         name={key} 
                         label={capFirstLetter(key)} 
                         value={item[key]} 
-                        nChangeHandler={(evt) => handleChange(evt, index)}/>
+                        onChangeHandler={(evt) => handleChange(evt, index)}/>
                     : <Input
                         key={key}
                         type={

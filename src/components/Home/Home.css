@@ -18,6 +18,15 @@
   border-radius: 7px;
 }
 
+.resume-cards div {
+  text-align: center;
+}
+
+.delay-message {
+  background-color: rgb(177, 177, 177);
+  color: rgb(160, 0, 0);
+}
+
 .resume-card {
   background-color: rgb(182, 181, 181);
   border: 1px solid rgb(137, 135, 135);
