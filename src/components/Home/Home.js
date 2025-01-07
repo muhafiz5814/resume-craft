@@ -37,9 +37,12 @@ const Home = () => {
         {/* Show error if the application is not connecting to the server properly */}
         <div className="resume-cards">
           {isLoading 
-            ? <h2>Loading...</h2>
+            ? <div>
+                <h2>Loading...</h2>
+                <p className="delay-message">It may take longer than usual for first time load due to free hosting plan. Sorry for delay and Thanks for patience.</p>
+              </div>
             : error 
-              ? <p>Unable to fetch data, please ensure to use <span style={{color: "green"}}>"resumes"</span> as database name in json server instead of <span style={{color: "red"}}>"api"</span></p>
+              ? <p>Unable to fetch data, <span style={{color: "red"}}>internal server error!</span> Reload or please try later.</p>
               : resumes.map(resume => <ResumeCard key={resume.id} id={resume.id} name={resume.basicInfo.name} onDelete={() => deleteHandler(resume.id)} />)          
           }
         </div>
