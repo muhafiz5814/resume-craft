@@ -1,8 +1,11 @@
 import { Router } from "express";
 
+import getAllResumes from "./get-all-resumes.js";
+
 const router = Router();
 
-router.get("/all", (req, res) => {res.send("Get all resumes path reached.")});
+// Get all resumes.
+router.get("/all", getAllResumes);
 
 router.post("/add", (req, res) => {res.send("Add new resume path reached.")});
 
