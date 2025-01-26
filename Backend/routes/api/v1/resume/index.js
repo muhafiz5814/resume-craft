@@ -1,13 +1,14 @@
 import { Router } from "express";
 
 import getAllResumes from "./get-all-resumes.js";
+import addResume from "./add-resume.js";
 
 const router = Router();
 
 // Get all resumes.
 router.get("/all", getAllResumes);
 
-router.post("/add", (req, res) => {res.send("Add new resume path reached.")});
+router.post("/add", addResume);
 
 router.delete("/delete/:id", (req, res) => {res.send(`To delete a resume of id ${req.params.id} path reached.`)});
 

@@ -7,8 +7,8 @@ import { getAllResumes } from "../../../../controllers/ResumeController.js";
 export default async (req, res) => {
     try {
         const { resumes } = await getAllResumes();
-        res.json({resumes});
+        res.json(resumes);
     } catch (error) {
-        res.status(error.status).json({message: "Server Error", ...error});
+        res.status(error.status).json({ message: "Server Error, unable to get all resumes.", ...error });
     }
 }

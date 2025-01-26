@@ -8,9 +8,18 @@ import Resume from "../models/Resume.js";
  */
 export const getAllResumes = async () => {
     try {
-        const resumes = await Resume.find({});
-        return Promise.resolve({resumes})
+        const resumes = await Resume.find({}, {__v: 0});
+        return Promise.resolve({ resumes });
     } catch (error) {
-        return Promise.reject({status: 500, ...error});
+        return Promise.reject({ status: 500, ...error });
+    }
+}
+
+export const addResume = async (resumeDetails) => {
+    try {
+        const resume = await Resume.create(resumeDetails);
+        return Promise.resolve({ resume });
+    } catch (error) {
+        return Promise.reject({ status: 500, ...error });
     }
 }
