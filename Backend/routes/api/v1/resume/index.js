@@ -2,6 +2,7 @@ import { Router } from "express";
 
 import getAllResumes from "./get-all-resumes.js";
 import addResume from "./add-resume.js";
+import deleteResume from "./delete-resume.js";
 
 const router = Router();
 
@@ -10,7 +11,7 @@ router.get("/all", getAllResumes);
 
 router.post("/add", addResume);
 
-router.delete("/delete/:id", (req, res) => {res.send(`To delete a resume of id ${req.params.id} path reached.`)});
+router.delete("/:id", deleteResume);
 
 router.put("/update/:id", (req, res) => {res.send(`To update a resume of id ${req.params.id} path reached.`)});
 
