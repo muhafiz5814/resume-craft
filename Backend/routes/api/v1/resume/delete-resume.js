@@ -5,7 +5,7 @@ export default async (req, res) => {
 
     try {
         const deletedResume = await deleteResume(id);
-        res.json(deletedResume);
+        res.status(204);
     } catch (error) {
         error.status === 400
             ? error.message = "Bad request, resume not found."

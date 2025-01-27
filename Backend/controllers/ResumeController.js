@@ -33,6 +33,18 @@ export const deleteResume = async (id) => {
         return Promise.resolve(deletedResume);
         
     } catch (error) {
-        return Promise.reject({status: 500})
+        return Promise.reject({status: 500, ...error})
+    }
+}
+
+export const updateResume = async (id, resumeDetails) => {
+    try {
+        const resume = await Resume.findByIdAndUpdate(id, resumeDetails, { new: true });
+
+        if (!resume) return Promise.reject({ status: 400 });
+
+        return Promise.resolve(resume);
+    } catch (error) {
+        return Promise.reject({ status: 500, ...error });
     }
 }
