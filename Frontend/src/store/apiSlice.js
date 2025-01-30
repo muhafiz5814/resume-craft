@@ -20,7 +20,7 @@ export const resumeApi = createApi({
   endpoints: (build) => ({
     // Gets all the resumes from the server
     getResumes: build.query({
-      query: () => "resumes",
+      query: () => "resumes/all",
       providesTags: ["Resumes"]
     }),
 
@@ -34,9 +34,9 @@ export const resumeApi = createApi({
     // As it updates the database, cache stored by RTK query needs to be invalidated, to get updated data from server
     addResume: build.mutation({
       query: (newResume) => ({
-        url: `/resumes`,
+        url: `/resumes/add`,
         method: `POST`,
-        body: JSON.stringify({id:nanoid() ,...newResume})
+        body: newResume
       }),
       invalidatesTags: ["Resumes"]
     }),
