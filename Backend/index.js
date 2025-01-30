@@ -1,12 +1,15 @@
 import "dotenv/config";
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 
 import resumeRoutes from "./routes/api/v1/resume/index.js";
 
 const app = express();
 
 const PORT = process.env.PORT || 3030;
+
+app.use(cors({ origin: process.env.CORS_ORIGIN }));
 
 app.use(express.json());
 
