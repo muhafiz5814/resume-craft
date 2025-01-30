@@ -15,6 +15,18 @@ export const getAllResumes = async () => {
     }
 }
 
+export const getResume = async (id) => {
+    try {
+        const resume = await Resume.findById(id, { __v: 0 });
+
+        if (!resume) return Promise.reject({ status: 400 });
+
+        return Promise.resolve({ resume });
+    } catch (error) {
+        return Promise.reject({ status: 500, ...error });
+    }
+}
+
 export const addResume = async (resumeDetails) => {
     try {
         const resume = await Resume.create(resumeDetails);
