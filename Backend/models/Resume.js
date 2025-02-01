@@ -1,5 +1,9 @@
 import { Schema, model } from "mongoose";
 
+// Create smaller schemas for every different small section of the resume document.
+// Combine all these shcemas in one single schema to create a resume schema.
+
+
 const basicInfoSchema = new Schema(
     {
         name: {type: String, required: true},
@@ -42,7 +46,7 @@ const skillSchema = new Schema({
 });
 
 
-
+// Complete Resume schema, consisting of different smaller schemas.
 const resumeSchema = new Schema({
     basicInfo: {type: basicInfoSchema, required: true},
     aboutMe: {type: String, required: true},
@@ -52,6 +56,7 @@ const resumeSchema = new Schema({
     skills: { type: [skillSchema], required: true }
 });
 
+// Create a model from resumeSchema.
 const Resume = model("Resume", resumeSchema);
 
 export default Resume;

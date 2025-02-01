@@ -1,5 +1,9 @@
 import { updateResume } from "../../../../controllers/ResumeController.js";
 
+/**
+ * If no error, sends updated resume in response.
+ * If any error, sends error in response.
+ */
 export default async (req, res) => {
     const id = req.params.id;
     const resumeDetails = req.body;

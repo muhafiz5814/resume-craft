@@ -1,5 +1,9 @@
 import { deleteResume } from "../../../../controllers/ResumeController.js";
 
+/**
+ * If no error, sends success status with no-content in response.
+ * If any error, sends error in response.
+ */
 export default async (req, res) => {
     const id = req.params.id;
 

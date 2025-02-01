@@ -11,8 +11,11 @@ const router = Router();
 // Get all resumes.
 router.get("/all", getAllResumes);
 
+// Add a new resume to database.
 router.post("/add", addResume);
 
+// Use route method to use different http methods on same path endpoint.
+// Use respective handlers in different http methods.
 router.route("/:id")
     .get(getResume)
     .put(updateResume)
