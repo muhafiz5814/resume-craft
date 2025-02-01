@@ -5,7 +5,7 @@ export default async (req, res) => {
     const resumeDetails = req.body;
 
     try {
-        const updatedResume = await updateResume(id, resumeDetails);
+        const { updatedResume } = await updateResume(id, resumeDetails);
         res.json(updatedResume);
     } catch (error) {
         error.status === 400

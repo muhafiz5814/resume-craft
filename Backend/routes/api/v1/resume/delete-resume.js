@@ -4,7 +4,7 @@ export default async (req, res) => {
     const id = req.params.id;
 
     try {
-        const deletedResume = await deleteResume(id);
+        await deleteResume(id);
         res.sendStatus(204);
         
     } catch (error) {

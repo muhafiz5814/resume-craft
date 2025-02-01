@@ -42,7 +42,7 @@ export const deleteResume = async (id) => {
 
         if (!deletedResume) return Promise.reject({ status: 400 });
 
-        return Promise.resolve(deletedResume);
+        return Promise.resolve({ deletedResume });
         
     } catch (error) {
         return Promise.reject({status: 500, ...error})
@@ -55,7 +55,7 @@ export const updateResume = async (id, resumeDetails) => {
 
         if (!resume) return Promise.reject({ status: 400 });
 
-        return Promise.resolve(resume);
+        return Promise.resolve({ resume });
     } catch (error) {
         return Promise.reject({ status: 500, ...error });
     }
