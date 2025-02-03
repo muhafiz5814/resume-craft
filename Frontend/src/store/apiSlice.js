@@ -1,6 +1,5 @@
 // Using RTK query to fetch and post data to server
 
-import { nanoid } from "@reduxjs/toolkit"
 import {createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 // base url of the server from where to fetch data
