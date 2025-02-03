@@ -17,7 +17,7 @@ Even though it was a Hackathon project, I still do enhancements and code optimiz
 ### Project overview
   <p align="center"><b>Click on image to see overview video tutorial.</b></p>
   
-[![Home page](https://github.com/user-attachments/assets/0f34c3ef-3681-4c20-a70d-a2d7efa22c91)](https://drive.google.com/file/d/1Qij1WnI_CjCfoXYwlaNS2CCk9fyha-Cc/view?usp=sharing)
+<a href="https://drive.google.com/file/d/1Qij1WnI_CjCfoXYwlaNS2CCk9fyha-Cc/view?usp=sharing" target="_blank">![Home page](https://github.com/user-attachments/assets/0f34c3ef-3681-4c20-a70d-a2d7efa22c91)</a>
 
 
 ### Run Locally
@@ -79,8 +79,8 @@ Let's first run backend so that frontend can connect with it.
 
 - You have successfully cloned and started the frontend in `localhost` environment on port - `3000`.
 
-There is no extra step needed to connect frontend and backend, these two are already connected locally if both are running on specified ports.
+There is no extra step needed to connect frontend and backend, these two are already connected locally, if both are running on specified ports.
 
-If you wish to make any changes or code optimizations that can enhance appliction performance, create an issue [here](https://github.com/muhafiz5814/resume-craft/issues).
+If you wish to make any changes or code optimizations that can enhance application UI or performance, create an issue [here](https://github.com/muhafiz5814/resume-craft/issues).
 
 If got assigned, do desired changes and make a PR mentioning the issue solved.
