@@ -34,11 +34,11 @@ Even though it was a Hackathon project, I still do enhancements and code optimiz
 
 - Main project directory has two sub-directories for `Backend` and `Frontend`.
 
-Let's first run backend so that our frontend can connect with it.
+Let's first run backend so that frontend can connect with it.
 
 #### Start Backend
 
-- Open project in any code editor of your choice, open terminal then go the `Backend` directory from current main `resume-craft` directory using the following command: 
+- Open project in any code editor of your choice, open terminal and then go to the `Backend` directory from current main `resume-craft` directory using the following command: 
   ```bash
     cd Backend
   ```
