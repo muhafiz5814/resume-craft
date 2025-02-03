@@ -14,7 +14,7 @@ const initialData = {
   aboutMe: "",
   education:  [
       {
-        school: "",
+        institute: "",
         startYear: "",
         endYear: "",
         description: ""

@@ -43,7 +43,7 @@ const Home = () => {
               </div>
             : error 
               ? <p>Unable to fetch data, <span style={{color: "red"}}>internal server error!</span> Reload or please try later.</p>
-              : resumes.map(resume => <ResumeCard key={resume.id} id={resume.id} name={resume.basicInfo.name} onDelete={() => deleteHandler(resume.id)} />)          
+              : resumes.map(resume => <ResumeCard key={resume._id} id={resume._id} name={resume.basicInfo.name} onDelete={() => deleteHandler(resume._id)} />)          
           }
         </div>
       </div>

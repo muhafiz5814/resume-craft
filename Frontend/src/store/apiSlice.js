@@ -1,9 +1,8 @@
 // Using RTK query to fetch and post data to server
 
-import { nanoid } from "@reduxjs/toolkit"
 import {createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
-// base url of the server from where to fetch data00
+// base url of the server from where to fetch data
 const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || "http://localhost:3030"
 
 // providesTags and invalidatTags are used to invalidate the cache stored by rtk query, whenever we update the server data.
@@ -20,7 +19,7 @@ export const resumeApi = createApi({
   endpoints: (build) => ({
     // Gets all the resumes from the server
     getResumes: build.query({
-      query: () => "resumes",
+      query: () => "resumes/all",
       providesTags: ["Resumes"]
     }),
 
@@ -34,9 +33,9 @@ export const resumeApi = createApi({
     // As it updates the database, cache stored by RTK query needs to be invalidated, to get updated data from server
     addResume: build.mutation({
       query: (newResume) => ({
-        url: `/resumes`,
+        url: `/resumes/add`,
         method: `POST`,
-        body: JSON.stringify({id:nanoid() ,...newResume})
+        body: newResume
       }),
       invalidatesTags: ["Resumes"]
     }),

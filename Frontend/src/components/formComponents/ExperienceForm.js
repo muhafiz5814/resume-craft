@@ -1,27 +1,29 @@
-import { addProject, updateProjects } from "../../store/tempResumeSlice"
+import { addExperience, updateExperience } from "../../store/tempResumeSlice"
 import { shallowEqual, useDispatch, useSelector } from "react-redux"
 import Input from "./Input"
 import TextArea from "./TextArea"
 
 // same as Education form
-const ProjectsForm = () => {
+const ExperienceForm = () => {
 
-  const emptyProject = {
-    title: "",
-    startMonth: "",
-    endMonth: "",
-    url: "",
+  const emptyExperience = {
+    designation: "",
+    organization: "",
+    startYear: "",
+    endYear: "",
+    location: "",
     description: ""
   }
 
+
   const dispatch = useDispatch()
-  const {projects} = useSelector(state => state.tempResume, shallowEqual)
+  const {experience} = useSelector(state => state.tempResume, shallowEqual)
 
   const handleChange = (evt, index) => {
     evt.preventDefault()
     const {name, value} = evt.target
-    const updatedProjects = projects.map((project, i) => i === index ? {...project, [name]: value} : project)
-    dispatch(updateProjects(updatedProjects))
+    const updatedExperience = experience.map((exp, i) => i === index ? {...exp, [name]: value} : exp)
+    dispatch(updateExperience(updatedExperience))
   }
 
   const capFirstLetter = (str) => {
@@ -29,17 +31,17 @@ const ProjectsForm = () => {
   }
 
   return (
-    <div className="projects-form form-block">
+    <div className="experience-form form-block">
       <div className="heading">
-        <h3 className="title">Projects</h3>
-        <button className="more-btn" onClick={() => dispatch(addProject(emptyProject))}>+</button>
+        <h3 className="title">Experience</h3>
+        <button className="more-btn" onClick={() => dispatch(addExperience(emptyExperience))}>+</button>
       </div>
       <div className="input-fields">
-        {projects 
-          ? projects.map((item, index) => 
+        {experience 
+          ? experience.map((item, index) => 
             <div key={index} className="section-item">
               {
-                Object.keys(item).map(key => ( key !== "id" &&
+                Object.keys(item).map(key => ( key !== "_id" &&
                   (key === "description" 
                     ?
                       <TextArea 
@@ -51,7 +53,7 @@ const ProjectsForm = () => {
                     : <Input
                         key={key}
                         type={
-                          key.includes("Month") ? "month"
+                          key.includes("Year") ? "month"
                           : "text"
                         }
                         name={key}
@@ -61,7 +63,7 @@ const ProjectsForm = () => {
                       />
                   )
                 ))
-              }  
+              }
             </div>
           )
           : <p>Loading...</p>
@@ -71,4 +73,4 @@ const ProjectsForm = () => {
   )
 }
 
-export default ProjectsForm
+export default ExperienceForm

@@ -4,7 +4,7 @@ import AboutMeForm from "../formComponents/AboutMeForm";
 import BasicInfoForm from "../formComponents/BasicInfoForm";
 import EducationForm from "../formComponents/EducationForm";
 import ExperienceForm from "../formComponents/ExperienceForm";
-import Form from "../formComponents/ProjectsForm";
+import ProjectForm from "../formComponents/ProjectsForm";
 import SkillsForm from "../formComponents/SkillsForm";
 import { useAddResumeMutation } from "../../store/apiSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -36,7 +36,7 @@ const CreateResume = () => {
           <AboutMeForm />
           <EducationForm />
           <ExperienceForm />
-          <Form />
+          <ProjectForm />
           <SkillsForm />
           <button type="submit">Submit</button>
         </form>
