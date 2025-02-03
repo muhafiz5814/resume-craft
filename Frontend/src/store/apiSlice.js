@@ -3,7 +3,7 @@
 import { nanoid } from "@reduxjs/toolkit"
 import {createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
-// base url of the server from where to fetch data00
+// base url of the server from where to fetch data
 const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || "http://localhost:3030"
 
 // providesTags and invalidatTags are used to invalidate the cache stored by rtk query, whenever we update the server data.

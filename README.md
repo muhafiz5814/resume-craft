@@ -32,75 +32,55 @@ Even though it was a Hackathon project, I still do enhancements and code optimiz
   ```
   - See how to clone [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-- Open project in any code editor of your choice, open terminal and then install dependencies using following command:
+- Main project directory has two sub-directories for `Backend` and `Frontend`.
+
+Let's first run backend so that our frontend can connect with it.
+
+#### Start Backend
+
+- Open project in any code editor of your choice, open terminal then go the `Backend` directory from current main `resume-craft` directory using the following command: 
+  ```bash
+    cd Backend
+  ```
+
+- Install all dependencies by running following command:
   ```bash
     npm install
   ```
-- Run your local JSON Server on localhost port 3030.
-  - **Strictly** use [this structure](#structure-of-json-server-database) to store data.
-  - To setup and know more about `json-server` go [here](https://www.npmjs.com/package/json-server). (It will not take long, it's a 2-3 step process)
 
-- Return to Resume Craft project terminal and run following command:
+- Create a `.env` file and set environment variable `DATABASE_CONNECTION_STRING` to your mongoDB atlas database.
+  - If not sure how to connect to MongoDB atlas, take a reference [**here from step 4-8**](https://www.geeksforgeeks.org/how-to-connect-node-js-to-mongodb-atlas-using-mongoose/),  which will work for this setup.
+
+- Finally to start backend locally, run following command:
   ```bash
     npm start
   ```
-- Hurray! You have successfully cloned and started the project in localhost environment.
-- If you want to make any changes or code optimizations, create an issue [here](https://github.com/muhafiz5814/resume-craft/issues).
-- If got assigned, make changes and make a PR mentioning the issue solved.
 
-#### Structure of json server database
-```json
-{
-  "resumes": [
-    {
-      "id": "DSfQoS0vDdlKAwIEXTR7A",
-      "basicInfo": {
-        "name": "Babil",
-        "designation": "Developer",
-        "address": "India",
-        "email": "some@gmail.com",
-        "phone": "1212121212",
-        "website": ""
-      },
-      "aboutMe": "Tell something about yourself",
-      "education": [
-        {
-          "school": "Aman",
-          "startYear": "2024-01",
-          "endYear": "2024-02",
-          "description": "Higher Education"
-        }
-      ],
-      "experience": [
-        {
-          "designation": "Web developmer",
-          "organization": "Microsoft",
-          "startYear": "2023-01",
-          "endYear": "2024-01",
-          "location": "India",
-          "description": "Worked as an intern in Git team."
-        }
-      ],
-      "projects": [
-        {
-          "title": "shopcart",
-          "startMonth": "2024-01",
-          "endMonth": "2024-02",
-          "url": "www.project.com",
-          "description": "A good project"
-        }
-      ],
-      "skills": [
-        {
-          "skill": "cloud",
-          "rating": "2"
-        },
-        {
-          "skill": "web development",
-          "rating": "4"
-        }
-      ]
-    }
-  ]
-}
-```
+- You have successfully cloned and started the backend in `localhost` environment on port - `3030`.
+
+
+#### Start Frontend
+
+- To start frontend, come back to main project directory `resume-craft` from `Backend` directory and go to `Frontend` directory using following commands: 
+  ```bash
+    cd ..
+    cd Frontend
+  ```
+
+- Install all dependencies by running following command:
+  ```bash
+    npm install
+  ```
+
+- Finally to start frontend locally, run following command:
+  ```bash
+    npm start
+  ```
+
+- You have successfully cloned and started the frontend in `localhost` environment on port - `3000`.
+
+There is no extra step needed to connect frontend and backend, these two are already connected locally if both are running on specified ports.
+
+If you wish to make any changes or code optimizations that can enhance appliction performance, create an issue [here](https://github.com/muhafiz5814/resume-craft/issues).
+
+If got assigned, do desired changes and make a PR mentioning the issue solved.
