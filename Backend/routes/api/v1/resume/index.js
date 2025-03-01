@@ -8,17 +8,16 @@ import getResume from "./get-resume.js";
 
 const router = Router();
 
-// Get all resumes.
-router.get("/all", getAllResumes);
-
-// Add a new resume to database.
-router.post("/add", addResume);
-
 // Use route method to use different http methods on same path endpoint.
 // Use respective handlers in different http methods.
+
+router.route("/")
+    .get(getAllResumes) // Get all resumes.
+    .post(addResume);   // Add a new resume to database.
+
 router.route("/:id")
-    .get(getResume)
-    .put(updateResume)
-    .delete(deleteResume);
+    .get(getResume) // Get a single resume of provided id.
+    .put(updateResume)  // Update resume of provided id.
+    .delete(deleteResume);  // Delete resume of provided id.
 
 export default router;

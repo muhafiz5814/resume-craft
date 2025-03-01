@@ -19,7 +19,7 @@ export const resumeApi = createApi({
   endpoints: (build) => ({
     // Gets all the resumes from the server
     getResumes: build.query({
-      query: () => "resumes/all",
+      query: () => "resumes",
       providesTags: ["Resumes"]
     }),
 
@@ -33,7 +33,7 @@ export const resumeApi = createApi({
     // As it updates the database, cache stored by RTK query needs to be invalidated, to get updated data from server
     addResume: build.mutation({
       query: (newResume) => ({
-        url: `/resumes/add`,
+        url: "resumes",
         method: `POST`,
         body: newResume
       }),
@@ -43,7 +43,7 @@ export const resumeApi = createApi({
     // Updates a resume with provided id and invalidates the cache, here "Resume" tagged cache will also be invalidated as the resume has updated.
     updateResume: build.mutation({
       query: ({ id, updatedResume }) => ({
-        url: `/resumes/${id}`,
+        url: `resumes/${id}`,
         method: 'PUT',
         body: updatedResume
       }), 
